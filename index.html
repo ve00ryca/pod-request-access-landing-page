@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Pod request access landing page</title>
-</head>
-<body>
-  Publish your podcasts everywhere.
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <!-- cdn reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <!-- custom styles -->
+    <link rel="stylesheet" href="styles/css/styles.css" />
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    <title>Pod request access</title>
+  </head>
+  <body>
+    <main>
+      <section class="image-background"></section>
 
-  Request access
-</body>
+      <section class="content">
+        <img id="logo" src="assets/desktop/logo.svg" alt="logo" />
+
+        <div id="text-container">
+          <h1>Publish your podcasts <span>everywhere.</span></h1>
+          <p>
+            Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts,
+            Google Podcasts, Pocket Casts and more!
+          </p>
+        </div>
+
+        <div id="providers-container">
+          <img src="assets/desktop/spotify.svg" alt="spotify" />
+          <img src="assets/desktop/apple-podcast.svg" alt="apple-podcast" />
+          <img src="assets/desktop/google-podcasts.svg" alt="google-podcasts" />
+          <img src="assets/desktop/pocket-casts.svg" alt="pocket-casts" />
+        </div>
+
+        <div id="email-validation-container">
+          <input type="text" placeholder="Email address" />
+          <button>Request access</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
