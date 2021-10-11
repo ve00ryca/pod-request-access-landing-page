@@ -1,8 +1,10 @@
-# Frontend Mentor - Pod request access landing page solution
+# Frontend Mentor - Pod request access landing page
 
 This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 # Have a look at my solution:
+
+https://pod-request-access-landing-page.netlify.app/
 
 ## Table of contents
 
@@ -32,6 +34,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- CSS Grid
 - Sass
 - JavaScript
 - Mobile-first workflow
