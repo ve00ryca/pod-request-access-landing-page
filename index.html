@@ -42,12 +42,30 @@
           /></a>
         </div>
 
-        <div id="email-validation-container">
-          <input type="text" placeholder="Email address" />
-          <button>Request access</button>
-        </div>
+        <form id="email-validation-container">
+          <input type="email" name="email" id="email" required placeholder="Email address" />
+          <button type="submit">Request access</button>
+        </form>
       </section>
       <img id="background-pattern" src="assets/desktop/bg-pattern-dots.svg" alt="background-pattern" />
     </main>
+    <script scr="scripts/email-validation.js"></script>
+    <script>
+      'use strict'
+
+      const email = document.querySelector('input[type="email"]')
+      console.log('email')
+      email.addEventListener('invalid', (event) => {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Oops! Please add your email')
+        } else if (event.target.validity.typeMismatch) {
+          event.target.setCustomValidity('Oops! Please check your email')
+        }
+      })
+
+      email.addEventListener('change', function (event) {
+        event.target.setCustomValidity('')
+      })
+    </script>
   </body>
 </html>

@@ -87,12 +87,18 @@ section.content {
     font-weight: 700;
     border: none;
     border-radius: 4rem; }
-  #email-validation-container input {
+  #email-validation-container input[type='email'] {
     max-width: 93%;
     color: #f1ecec;
     background: #2c344b;
-    text-align: left; }
-    #email-validation-container input:focus-visible {
+    text-align: left;
+    /* &:invalid {
+      border-color: #900;
+    }
+    &:focus:invalid {
+      outline: none;
+    } */ }
+    #email-validation-container input[type='email']:focus-visible {
       outline: none; }
   #email-validation-container button {
     color: #121725;
@@ -100,10 +106,10 @@ section.content {
     margin-top: 1.1rem;
     text-align: center;
     transition: 0.5s ease; }
-  #email-validation-container button:hover {
-    background-color: #f1ecec;
-    letter-spacing: 0.1em;
-    cursor: pointer; }
+    #email-validation-container button:hover {
+      background-color: #f1ecec;
+      letter-spacing: 0.1em;
+      cursor: pointer; }
 
 #logoo {
   display: none; }
