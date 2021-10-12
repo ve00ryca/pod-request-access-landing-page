@@ -95,6 +95,12 @@ section.content {
       height: auto;
     }
   }
+  a {
+    transition: 0.5s ease;
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
 #email-validation-container {
   width: 100%;

@@ -72,6 +72,10 @@ section.content {
     #providers-container img:first-child, #providers-container img:nth-child(2) {
       max-width: 85%;
       height: auto; }
+  #providers-container a {
+    transition: 0.5s ease; }
+    #providers-container a:hover {
+      transform: translateY(-10px); }
 
 #email-validation-container {
   width: 100%; }
