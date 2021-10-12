@@ -127,11 +127,11 @@ section.content {
     background-color: $lightGreen;
     margin-top: 1.1rem;
     text-align: center;
+    transition: 0.5s ease;
   }
   button:hover {
     background-color: $whiteSmoke;
     letter-spacing: 0.1em;
-    transition: 0.5s ease;
     cursor: pointer;
   }
 }
@@ -192,6 +192,9 @@ section.content {
       top: 0;
       right: 0;
       width: 40%;
+      &:hover {
+        width: 45%;
+      }
     }
   }
   #logoo {
@@ -261,3 +264,8 @@ section.content {
     background: linear-gradient($deepBlue 0%, $deepBlue 90%, #6cd6b0 120%);
   }
 }
+/* @media (min-height: 800px) and (min-width: 950px) and (max-width: 1095px) {
+  #email-validation-container button:hover {
+    letter-spacing: 0 !important;
+  }
+} */

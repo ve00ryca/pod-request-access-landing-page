@@ -98,11 +98,11 @@ section.content {
     color: #121725;
     background-color: #54e6af;
     margin-top: 1.1rem;
-    text-align: center; }
+    text-align: center;
+    transition: 0.5s ease; }
   #email-validation-container button:hover {
     background-color: #f1ecec;
     letter-spacing: 0.1em;
-    transition: 0.5s ease;
     cursor: pointer; }
 
 #logoo {
@@ -160,6 +160,8 @@ section.content {
       top: 0;
       right: 0;
       width: 40%; }
+      #email-validation-container button:hover {
+        width: 45%; }
 
   #logoo {
     display: inline-block;
@@ -216,5 +218,10 @@ section.content {
   main {
     margin: 0 auto;
     background: linear-gradient(#121725 0%, #121725 90%, #6cd6b0 120%); } }
+/* @media (min-height: 800px) and (min-width: 950px) and (max-width: 1095px) {
+  #email-validation-container button:hover {
+    letter-spacing: 0 !important;
+  }
+} */
 
 /*# sourceMappingURL=styles.css.map */
