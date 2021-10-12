@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
+
+/* Custom properties and variables */
 $lightGreen: #54e6af;
 $whiteSmoke: #f1ecec;
 $deepBlue: #121725;
@@ -6,7 +8,20 @@ $deepBlueTransparent: rgba(18, 23, 37, 0.8);
 $darkGray: #2c344b;
 $gray: #5a668a;
 $lightGray: #c2cbe5;
+/* for tablet */
+$tabletMaxMainWidth: 768px;
+$tabletMaxMainHeight: 1024px;
+$tabletMaxBgrImgWidth: 491px;
+$tabletMaxBgrImgHeight: 767px;
+$tabletMaxContentWidth: 635px;
+/* for desktop */
+$desktopMaxMainWidth: 1440px;
+$desktopMaxMainHeight: 100vh;
+$desktopMaxBgrImgWidth: 962px;
+$desktopMaxBgrImgHeight: 640px;
+$desktopMaxContentWidth: 723px;
 
+/* Base rules */
 html,
 body {
   color: $whiteSmoke;
@@ -124,21 +139,23 @@ section.content {
 /* Tablet design */
 @media (min-width: 768px) {
   main {
-    max-width: 768px;
-    height: 1024px;
+    margin-right: 0;
+    background: linear-gradient($deepBlue, $deepBlueTransparent);
+    max-width: $tabletMaxMainWidth;
+    height: $tabletMaxMainHeight;
   }
   section.image-background {
     background: url(../../assets/tablet/image-host.jpg) no-repeat;
-    max-width: 491px;
-    height: 767px;
+    max-width: $tabletMaxBgrImgWidth;
+    height: $tabletMaxBgrImgHeight;
     left: 36%;
   }
   section.content {
-    max-width: 635px;
+    max-width: $tabletMaxContentWidth;
     top: 25%;
-    max-height: calc(767px - 25%);
+    max-height: calc(#{$tabletMaxBgrImgHeight} - 25%);
     #logo {
-      opacity: 0;
+      display: none;
     }
   }
   #text-container {
@@ -149,6 +166,8 @@ section.content {
     }
     p {
       width: 70%;
+      padding: 0;
+      padding-top: 1rem;
       font-size: 1rem;
       line-height: 1.5rem;
     }
@@ -180,5 +199,59 @@ section.content {
     position: absolute;
     bottom: 0;
     left: 1.1rem;
+  }
+}
+
+/* Desktop design */
+@media (min-width: 970px) {
+  main {
+    width: 100%;
+    max-width: $desktopMaxMainWidth;
+    max-height: $desktopMaxMainHeight;
+  }
+  section.image-background {
+    background: url(../../assets/desktop/image-host.jpg) no-repeat right;
+    max-width: $desktopMaxBgrImgWidth;
+    height: $desktopMaxBgrImgHeight;
+    left: 36%;
+  }
+  section.content {
+    width: 51%;
+    max-width: $desktopMaxContentWidth;
+    top: 15%;
+    max-height: calc(#{$desktopMaxBgrImgHeight} - 15%);
+    padding-bottom: 0;
+    background: $deepBlue;
+  }
+  #text-container {
+    h1 {
+      font-size: 2.9rem; /* 52px */
+      line-height: 3.4rem; /* 62px */
+    }
+    p {
+      width: 62%;
+      line-height: 1.6rem;
+    }
+  }
+  #email-validation-container {
+    width: 62%;
+  }
+  #background-pattern {
+    left: auto;
+    right: 0;
+    top: calc(#{$desktopMaxBgrImgHeight} - 104px / 2); // self-hight: 104px
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    margin: 0 auto;
+  }
+}
+
+@media (min-height: 800px) and (min-width: 970px) {
+  main {
+    margin: 0 auto;
+    background: linear-gradient($deepBlue 0%, $deepBlue 90%, #6cd6b0 120%);
   }
 }
